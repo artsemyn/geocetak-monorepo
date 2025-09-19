@@ -2,32 +2,33 @@
     "name": "@geocetak/web",
     "version": "0.0.0",
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "type-check": "tsc --noEmit"
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
+      "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "type-check": "tsc --noEmit"
     },
     "dependencies": {
-        "@emotion/react": "^11.11.0",
-        "@emotion/styled": "^11.11.0",
-        "@geocetak/shared-logic": "file:../../packages/shared-logic",
-        "@mui/icons-material": "^5.15.0",
-        "@mui/material": "^5.15.0",
-        "@react-three/drei": "^9.122.0",
-        "@react-three/fiber": "^8.18.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.20.0",
-        "three": "^0.160.1"
+      "@geocetak/shared-logic": "file:../../packages/shared-logic",
+      "@emotion/react": "^11.11.1",
+      "@emotion/styled": "^11.11.0",
+      "@mui/material": "^5.15.0",
+      "@mui/icons-material": "^5.15.0",
+      "@react-three/fiber": "^8.15.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.20.0",
+      "three": "^0.160.0"
     },
     "devDependencies": {
-        "@types/react": "^18.2.43",
-        "@types/react-dom": "^18.2.17",
-        "@types/three": "^0.160.0",
-        "@vitejs/plugin-react": "^4.2.0",
-        "typescript": "^5.0.0",
-        "vite": "^5.0.0"
+      "@types/react": "^18.2.43",
+      "@types/react-dom": "^18.2.17",
+      "@types/three": "^0.160.0",
+      "@vitejs/plugin-react": "^4.2.0",
+      "eslint": "^8.57.0",
+      "typescript": "^5.3.0",
+      "vite": "^5.0.0"
     }
-}
+  }

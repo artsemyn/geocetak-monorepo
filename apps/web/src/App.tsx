@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useAuthStore } from '@geocetak/shared-logic';
-import { Box, CircularProgress } from '@mui/material';
-import DashboardLayout from './components/layout/DashboardLayout';
+import { CircularProgress } from '@mui/material';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
 import ThreeDTestPage from './pages/ThreeDTestPage';
+import ModuleDetailPage from './pages/ModuleDetailPage';
+import Layout from './components/Layout';
 
 function App() {
   const { user, loading, initialize } = useAuthStore();
@@ -16,9 +17,14 @@ function App() {
 
   if (loading) {
     return (
-      <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh' 
+      }}>
         <CircularProgress />
-      </Box>
+      </div>
     );
   }
 
@@ -27,12 +33,14 @@ function App() {
   }
 
   return (
-    <DashboardLayout>
+    <Layout>
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/3d-test" element={<ThreeDTestPage />} />
+        <Route path="/modules/:moduleId" element={<ModuleDetailPage />} />
+        <Route path="/lessons/:lessonId" element={<div>Lesson View (Coming Soon)</div>} />
       </Routes>
-    </DashboardLayout>
+    </Layout>
   );
 }
 
